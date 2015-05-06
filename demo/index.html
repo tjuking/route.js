@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>route.js使用示例</title>
+    <style>
+        .menu li:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <li data-url="?type=1">type 1</li>
+        <li data-url="?type=2">type 2</li>
+    </ul>
+    <script src="../require/jquery-1.8.3.min.js"></script>
+    <script src="../src/route.js"></script>
+    <script>
+    $(function(){
+        var theRoute = new Route({
+            type: 1
+        });
+
+        init();
+
+        //程序入口
+        function init(){
+            theRoute.init();
+            bindEvent();
+        }
+
+        //事件绑定
+        function bindEvent(){
+            $(".menu").on("click", "li", function(){
+                var url = $(this).data("url");
+                //改变路由
+                theRoute.change(url);
+            });
+            //监听路由的变化
+            $(theRoute).on("update", function(){
+                //获取路由参数
+                alert("type: " + theRoute.getConfig().type);
+            });
+        }
+    });
+    </script>
+</body>
+</html>
