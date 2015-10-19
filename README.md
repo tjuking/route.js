@@ -12,27 +12,29 @@ IE10+、Chrome、Firefox、Safari等（在IE6-9中更新路由将更换页面）
 
 ### 使用
 
+```html
 	<!-- 引入依赖 和 route.js -->
 	<script src="../require/jquery-1.8.3.min.js"></script>
 	<script src="../src/route.js"></script>
 	<script>
 	//实例化Route（可传递默认的路由参数）
 	var theRoute = new Route({
-        type: 1
-    });
+        	type: 1
+    	});
     
-    //开始运行
-    theRoute.init();
+    	//开始运行
+    	theRoute.init();
     
-    //切换路由（参数为更新的url）
-    theRoute.change(url);
+    	//切换路由（参数为更新的url）
+    	theRoute.change(url);
     
-    //监听路由
-    $(theRoute).on("update", function(){
-         //获取路由参数
-         console.log(theRoute.getConfig().type);
-    });
-    </script>
+    	//监听路由
+    	$(theRoute).on("update", function(){
+         	//获取路由参数
+         	console.log(theRoute.getConfig().type);
+    	});
+    	</script>
+```
     
 ### 说明
 
