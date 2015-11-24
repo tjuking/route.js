@@ -12,6 +12,7 @@ IE10+、Chrome、Firefox、Safari等（在IE6-9中更新路由将更换页面）
 
 ### 使用
 
+```html
 	<!-- 引入依赖 和 route.js -->
 	<script src="../require/jquery-1.8.3.min.js"></script>
 	<script src="../src/route.js"></script>
@@ -33,6 +34,7 @@ IE10+、Chrome、Firefox、Safari等（在IE6-9中更新路由将更换页面）
          console.log(theRoute.getConfig().type);
     });
     </script>
+```
     
 ### 说明
 
