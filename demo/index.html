@@ -26,12 +26,13 @@
 
         //程序入口
         function init(){
-            theRoute.init();
+            theRoute.start();
             bindEvent();
         }
 
         //事件绑定
         function bindEvent(){
+            //菜单点击的响应
             $(".menu").on("click", "li", function(){
                 var url = $(this).data("url");
                 //改变路由

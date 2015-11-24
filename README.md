@@ -22,7 +22,7 @@ IE10+、Chrome、Firefox、Safari等（在IE6-9中更新路由将更换页面）
     });
     
     //开始运行
-    theRoute.init();
+    theRoute.start();
     
     //切换路由（参数为更新的url）
     theRoute.change(url);
